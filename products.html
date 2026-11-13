@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -35,18 +36,21 @@
         <h3>Breads</h3>
         <p>Crusty loaves, soft sandwich bread, and seasonal specialties baked every morning.</p>
         <p class="price">Price range: $5 to $9</p>
+        <button type="button" class="button add-btn" data-item="Breads">Add to Pre-Order List</button>
       </article>
 
       <article class="product-card">
         <h3>Pastries</h3>
         <p>Flaky croissants, muffins, and sweet treats, perfect for a morning commute or a family snack.</p>
         <p class="price">Price range: $3 to $6</p>
+        <button type="button" class="button add-btn" data-item="Pastries">Add to Pre-Order List</button>
       </article>
 
       <article class="product-card">
         <h3>Cakes</h3>
         <p>Custom and ready-made cakes for birthdays, weddings, and community events. Order ahead for best selection.</p>
         <p class="price">Price range: $25 to $80</p>
+        <button type="button" class="button add-btn" data-item="Cakes">Add to Pre-Order List</button>
       </article>
     </section>
 
@@ -56,7 +60,15 @@
         <img src="assets/images/bakery-signature-loaf_c.png" alt="Our signature loaf, golden brown with a scored crust">
         <figcaption>Our Signature Loaf: a neighborhood favorite, baked fresh daily.</figcaption>
       </figure>
+      <button type="button" class="button add-btn" data-item="Signature Loaf">Add to Pre-Order List</button>
       <a href="contact.html" class="button">Request a Pre-Order</a>
+    </section>
+
+    <section class="preorder-list">
+      <h2>My Pre-Order List</h2>
+      <p id="list-empty">Your list is empty. Add items above to start a pre-order.</p>
+      <ul id="list-items"></ul>
+      <a href="contact.html" class="button">Send My List to the Bakery</a>
     </section>
 
   </main>

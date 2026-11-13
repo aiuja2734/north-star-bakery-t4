@@ -341,3 +341,27 @@ textarea:focus {
     margin: 0 auto;
   }
 }
+
+/* ===== Form validation feedback ===== */
+.error {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: var(--terracotta);
+  border-width: 3px;
+}
+
+.form-success {
+  padding: 1rem;
+  font-weight: 700;
+  background-color: var(--wheat);
+  border-radius: 10px;
+}

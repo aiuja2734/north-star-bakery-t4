@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Contact</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -29,18 +30,21 @@
 
     <section class="request-form">
       <h2>Inquiry &amp; Pre-Order Request</h2>
-      <form action="#" method="post">
+      <p id="form-success" class="form-success" role="status" hidden></p>
+      <form action="#" method="post" id="contact-form" novalidate>
         <fieldset>
           <legend>Your Request</legend>
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" aria-describedby="name-error">
+            <span class="error" id="name-error" role="alert"></span>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" aria-describedby="email-error">
+            <span class="error" id="email-error" role="alert"></span>
           </div>
 
           <div class="form-group">
@@ -59,7 +63,8 @@
 
           <div class="form-group">
             <label for="item-details">Item Details</label>
-            <textarea id="item-details" name="item-details" rows="4" placeholder="Tell us what you'd like and how many."></textarea>
+            <textarea id="item-details" name="item-details" rows="4" placeholder="Tell us what you'd like and how many." aria-describedby="item-details-error"></textarea>
+            <span class="error" id="item-details-error" role="alert"></span>
           </div>
 
           <div class="form-group">
